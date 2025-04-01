@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: 'Nunito';
+}
+
+section{
+    margin-top: 5px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: sticky;
+    background-color: rgb(38, 168, 38);
+    z-index: 100;
+}
+
+header .logo img{
+    font-size: 2rem;
+    width: 100px;
+    border-radius: 6px;
+}
+
+#menu-icon{
+    font-size: 2rem;
+    color: #ffa500;
+    display: none;
+    cursor: pointer;
+}
+
+nav{
+    position: relative;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 1.75rem;
+}
+
+.navbar li{
+    margin-left: 4rem;
+}
+
+.navbar li a{
+    color: aliceblue;
+}
+
+.navbar .dropdown li a{
+    color: black;
+}
+
+.navbar ul li a:hover,
+.navbar a.active{
+    color: yellowgreen;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 200;
+    align-items: center;
+}
+
+nav ul li:hover > .dropdown{
+    display: block;
+}
+
+.dropdown a{
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown a:hover{
+    text-decoration: underline;
+}
+
+
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    background-image: url(imgs/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 15s infinite linear;
+}
+
+.slides{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slides h1{
+    color: #fff;
+    font-size: 3rem;
+}
+
+@keyframes change {
+    0%{
+        background-image: url(imgs/1.jpg);
+    }
+    20%{
+        background-image: url(imgs/2.jpg);
+    }
+    40%{
+        background-image: url(imgs/3.jpg);
+    }
+    60%{
+        background-image: url(imgs/4.jpg);
+    }
+    80%{
+        background-image: url(imgs/5.jpg);
+    }
+    100%{
+        background-image: url(imgs/6.jpg);
+    }
+}
+
+.container{
+    margin-top: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 0.5rem;
+    font-family: 'Nunito';
+    font-weight: 300;
+    
+}
+
+.title{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: rgb(22, 36, 1);
+}
+
+.container .content{
+    padding: 1rem 1rem;
+    font-size: larger;
+    line-height: 1.5rem;
+}
+
+.btn{
+   color: rgb(22, 36, 1);
+   border: 2px solid rgb(83, 83, 18);
+   border-radius: 5px;
+   width: 160px;
+   height: 40px;
+   cursor: pointer;
+}
+
+.btn-t{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: rgb(83, 83, 18);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card{
+    padding: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h4{
+    color: rgb(148, 122, 4);
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: #000;
+}
+
+.container-fluid{
+    background-image: url(imgs/10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 20px 50px;
+}
+
+.MVC{
+    flex: 1;
+    padding: 0 10px;
+}
+
+.MVC h3{
+    margin-bottom: 1rem;
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+.MVC p, ul li{
+    font-size: 1.2rem;
+    color: #ddd;
+    font-weight: 600;
+    list-style: none;
+}
+
+.why{
+    display: flex;
+    flex-wrap: wrap;
+    
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.why .title{
+    text-align: center;
+    width: 100%;
+}
+
+.col-1, .col-2{
+    flex: 1;
+    padding: 20px;
+}
+
+.col-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.col-2{
+    position: relative;
+}
+
+.col-2 img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.col-2 button{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    border: 2px solid rgb(83, 83, 18);
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.col-2 button a{
+    color: rgb(22, 36, 1);
+}
+
+.col-2 button:hover{
+    background-color: rgb(83, 83, 18);
+}
+
+.contact-form{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffa500;
+
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: top 5px;
+    border: 1px solid #ccc;
+    border-radius:5px;
+    resize:none;
+
+}
+.radio-group{
+    margin: 15px 0;
+}
+.radio-group label{
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.footer{
+    background-image: url(imgs/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 20px 30px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.footer-column{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3{
+    margin-bottom: .5rem;
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+.footer-column .socials i{
+    color: #ffa500;
+}
+
+.footer-column .socials p{
+    color: #000;
+}
+
+.footer-column  a{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-column a:hover{
+    text-decoration: underline;
+    color: #ccc;
+}
+
+.end{
+    height: 1.7rem;
+    width: 100%;
+    padding: 5px;
+    background-color: #ffa500;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+@media (max-width: 990px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    
+
+    nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: #333;
+    }
+
+    nav.show{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown{
+        position: relative;
+        background-color: #333;
+        min-width: none;
+    }
+
+    .dropdown li a{
+        font-size: 1rem;
+    }
+
+    .slides .multiple-text{
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    .navbar .active{
+        display: block;
+    }
+
+    .slides .multiple-text{
+        font-size: 1.3rem;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container-fluid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why{
+        flex-direction: column;
+    }
+
+    .col-1, .col-2{
+        flex: 100%;
+        padding: 15px;
+    }
+
+    .col-2 button{
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .footer{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer-column{
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+
+    .end{
+        width: 100%;
+        padding: 0;
+        font-size: smaller;
+        height: 100%;
+    }
+}
